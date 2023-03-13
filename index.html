@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Customer Services</title>
+    <style>
+        html {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            padding: 0;
+            background-color: grey;
+        }
+
+        li {
+            float: left;
+            border-right: 2px solid white;
+        }
+
+        div li {
+            border-right: none;
+            border-left: 2px solid white;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            padding: 20px 25px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: black;
+        }
+
+        li .active {
+            background-color: black;
+        }
+
+        .formPopup {
+            display: none;
+            width: 400px;
+        }
+
+        .containerContact {
+            width: 500px;
+            background-color: grey;
+            display: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="Home.html">Home</a></li>
+        <li><a href="">System logo</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="/contact.html">Contact us</a></li>
+        <li><a onclick="openPopup('formSignup')">Sign up</a></li>
+        <li><a onclick="openPopup('formLogin')">Sign-in</a></li>
+        <div style="float:right">
+            <li><a href="">Reviews</a></li>
+            <li><a href="">Shopping Cart</a></li>
+            <li><a href="">Types of Services</a></li>
+        </div>
+    </ul>
+
+    <!-- Contact Us
+    <div class="containerContact" id="contact">
+        <p>Huang Gary gary1.huang@torontomu.ca<br>
+            Huynh Thanh t10huynh@torontomu.ca<br>
+            Huynh Dinh Ngoc Tradinh.huynh@torontomu.ca<br>
+            Jiang Franky franky.jiang@torontomu.ca<br>
+            Jose Keith keith.jose@torontomu.ca</p>
+        <button onclick="closePopup('contact')">Close</button>
+    </div> -->
+
+    <!-- Sign up -->
+    <div class="formPopup" id="formSignup">
+        <form style="border:1px solid black">
+            <h1>Sign Up</h1>
+            <p>Fill out this form to create an account.</p>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="password"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="password" required>
+            <br>
+            <label for="repeatPass"><b>Re-enter Password</b></label>
+            <input type="text" placeholder="Re-enter Password" name="repeatPass" required>
+            <br>
+            <button type="submit">Sign Up</button>
+            <button onclick="closePopup('formSignup')">Close</button>
+        </form>
+    </div>
+
+    <!-- Login -->
+    <div class="formPopup" id="formLogin">
+        <form style="border:1px solid black">
+            <h1>Log In</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="password"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+            <button onclick="closePopup('formLogin')">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
