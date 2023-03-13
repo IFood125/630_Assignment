@@ -1,12 +1,56 @@
+:root {
+    --main-container-bg-colour: rgb(214, 255, 233);
+    --auth-bg-colour: rgb(139, 202, 139);
+}
+
 img.Person {
     width: 15%;
 }
+
 .person-info-container {
-    background-color: rgb(214, 255, 233);
+    background-color: var(--main-container-bg-colour);
     border-radius: 0 0 10px 10px;
 }
+
 .person-container {
     text-align: center;
     border-radius: 10px;
     box-shadow: 10px 5px 5px gray;
+}
+
+.login-bg {
+    height: 100vh;
+    background-color: var(--auth-bg-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    padding: 30px;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(101, 148, 101);
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
 }
